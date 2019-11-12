@@ -144,6 +144,10 @@
 
 <p>Shrine is a toolkit for file attachments in Crystal applications. Heavily inspired by <a href="https://shrinerb.com" target="_blank">Shrine for Ruby</a>.</p>
 
+<h2>Documentation</h2>
+
+<p><a href="https://jetrockets.github.io/shrine.cr" target="_blank">https://jetrockets.github.io/shrine.cr</a></p>
+
 <h2>Installation</h2>
 
 <ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
@@ -162,7 +166,7 @@
 
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;shrine.cr&quot;</span></code></pre>
 
-<p>Shrine.cr is under heavy development! </p>
+<p>Shrine.cr is under heavy development!</p>
 
 <p>First of all you should configure <code><a href="Shrine.html">Shrine</a></code>.</p>
 
@@ -270,7 +274,7 @@
 <p>In no particular order, features that have been implemented and are planned.
 Items not marked as completed may have partial implementations.</p>
 
-<ul><li>[X] Shrine</li><li>[X] Shrine::UploadedFile</li><li>[ ] Shrine::Attacher</li><li>[ ] Shrine::Attachment</li><li>[ ] Shrine::Storage</li><ul><li>[X] Shrine::Storage::Memory</li><li>[X] Shrine::Storage::FileSystem</li><li>[ ] Shrine::Storage::S3</li></ul><li>[ ] Uploaders</li><ul><li>[X] Custom uploaders</li><li>[ ] Derivatives</li></ul><li>[ ] ORM adapters</li><ul><li>[ ] <code>Granite</code> <a href="https://github.com/amberframework/granite" target="_blank">https://github.com/amberframework/granite</a></li><li>[ ] <code>crecto</code> <a href="https://github.com/Crecto/crecto" target="_blank">https://github.com/Crecto/crecto</a></li><li>[ ] <code>jennifer.cr</code> <a href="https://github.com/imdrasil/jennifer.cr" target="_blank">https://github.com/imdrasil/jennifer.cr</a></li></ul><li>[ ] Plugins</li><li>[ ] Background processing</li></ul>
+<ul><li>[X] Shrine</li><li>[X] Shrine::UploadedFile</li><ul><li>[X] #original_filename</li><li>[X] #extension</li><li>[X] #size</li><li>[X] #mime_type</li><li>[ ] #[]</li><li>[ ] #read</li><li>[ ] #eof?</li><li>[ ] #rewind</li><li>[ ] #close</li><li>[ ] #url</li><li>[ ] #exists?</li><li>[X] #open</li><li>[X] #download</li><li>[X] #stream</li><li>[ ] #replace</li><li>[ ] #delete</li></ul><li>[ ] Shrine::Attacher</li><li>[ ] Shrine::Attachment</li><li>[ ] Shrine::Storage</li><ul><li>[X] Shrine::Storage::Memory</li><li>[X] Shrine::Storage::FileSystem</li><li>[ ] Shrine::Storage::S3</li></ul><li>[ ] Uploaders</li><ul><li>[X] Custom uploaders</li><li>[ ] Derivatives</li></ul><li>[ ] ORM adapters</li><ul><li>[ ] <code>Granite</code> <a href="https://github.com/amberframework/granite" target="_blank">https://github.com/amberframework/granite</a></li><li>[ ] <code>crecto</code> <a href="https://github.com/Crecto/crecto" target="_blank">https://github.com/Crecto/crecto</a></li><li>[ ] <code>jennifer.cr</code> <a href="https://github.com/imdrasil/jennifer.cr" target="_blank">https://github.com/imdrasil/jennifer.cr</a></li></ul><li>[ ] Plugins</li><li>[ ] Background processing</li></ul>
 
 <h2>Contributing</h2>
 
