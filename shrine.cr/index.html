@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.1">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/jetrockets/shrine.cr">
+  <title>README - github.com/jetrockets/shrine.cr</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine" data-name="shrine">
+      <a href="Shrine.html">Shrine</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/ClassMethods" data-name="shrine::classmethods">
+      <a href="Shrine/ClassMethods.html">ClassMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Error" data-name="shrine::error">
+      <a href="Shrine/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/FileNotFound" data-name="shrine::filenotfound">
+      <a href="Shrine/FileNotFound.html">FileNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/InstanceMethods" data-name="shrine::instancemethods">
+      <a href="Shrine/InstanceMethods.html">InstanceMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/InvalidFile" data-name="shrine::invalidfile">
+      <a href="Shrine/InvalidFile.html">InvalidFile</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins" data-name="shrine::plugins">
+      <a href="Shrine/Plugins.html">Plugins</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/Base" data-name="shrine::plugins::base">
+      <a href="Shrine/Plugins/Base.html">Base</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Settings" data-name="shrine::settings">
+      <a href="Shrine/Settings.html">Settings</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage" data-name="shrine::storage">
+      <a href="Shrine/Storage.html">Storage</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage/Base" data-name="shrine::storage::base">
+      <a href="Shrine/Storage/Base.html">Base</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage/FileSystem" data-name="shrine::storage::filesystem">
+      <a href="Shrine/Storage/FileSystem.html">FileSystem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage/Memory" data-name="shrine::storage::memory">
+      <a href="Shrine/Storage/Memory.html">Memory</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile" data-name="shrine::uploadedfile">
+      <a href="Shrine/UploadedFile.html">UploadedFile</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/Metadata" data-name="shrine::uploadedfile::metadata">
+      <a href="Shrine/UploadedFile/Metadata.html">Metadata</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<p><a href="https://travis-ci.org/jetrockets/shrine.cr" target="_blank"><img src="https://travis-ci.org/jetrockets/shrine.cr.svg?branch=master" alt="Build Status"/></a></p>
+
+<h1>shrine.cr</h1>
+
+<p>Shrine is a toolkit for file attachments in Crystal applications. Heavily inspired by <a href="https://shrinerb.com" target="_blank">Shrine for Ruby</a>.</p>
+
+<h2>Installation</h2>
+
+<ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
+
+<p><code></code>`yaml
+   dependencies:</p>
+
+<pre><code> shrine.cr:
+   github: jetrockets<span class="s">/shrine.cr</code></pre>
+
+<p><code></code>`</p>
+
+<ol><li>Run <code>shards install</code></li></ol>
+
+<h2>Usage</h2>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;shrine.cr&quot;</span></code></pre>
+
+<p>Shrine.cr is under heavy development! </p>
+
+<p>First of all you should configure <code><a href="Shrine.html">Shrine</a></code>.</p>
+
+<pre><code class="language-crystal"><span class="t">Shrine</span>.configure <span class="k">do</span> <span class="o">|</span>config<span class="o">|</span>
+  config.storages[<span class="s">&quot;cache&quot;</span>] <span class="o">=</span> <span class="t">Storage</span><span class="t">::</span><span class="t">FileSystem</span>.<span class="k">new</span>(<span class="s">&quot;uploads&quot;</span>, prefix: <span class="s">&quot;cache&quot;</span>)
+  config.storages[<span class="s">&quot;store&quot;</span>] <span class="o">=</span> <span class="t">Storage</span><span class="t">::</span><span class="t">FileSystem</span>.<span class="k">new</span>(<span class="s">&quot;uploads&quot;</span>)
+<span class="k">end</span></code></pre>
+
+<p>Now you can use <code><a href="Shrine.html">Shrine</a></code> directly to upload your files.</p>
+
+<pre><code class="language-crystal"><span class="t">Shrine</span>.upload(file, <span class="n">:store</span>)</code></pre>
+
+<p><code>Shrine.upload</code> method supports additional argument just like Shrine.rb. For example we want our file to have a custom filename.</p>
+
+<pre><code class="language-crystal"><span class="t">Shrine</span>.upload(file, <span class="n">:store</span>, metadata: { filename: <span class="s">&quot;foo.bar&quot;</span> })</code></pre>
+
+<h3>Custom uploaders</h3>
+
+<p>To implement custom uploader class just inherit it from <code><a href="Shrine.html">Shrine</a></code>. You can override <code><a href="Shrine.html">Shrine</a></code> methods to implement custom logic. Here is an example how to create a custom file location.</p>
+
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span> <span class="o">&lt;</span> <span class="t">Shrine</span>
+  <span class="k">def</span> <span class="m">generate_location</span>(io : <span class="t">IO</span> <span class="o">|</span> <span class="t">UploadedFile</span>, metadata, context, <span class="o">**</span>options)
+    name <span class="o">=</span> <span class="k">super</span>(io, metadata, <span class="o">**</span>options)
+
+    <span class="t">File</span>.join(<span class="s">&quot;imports&quot;</span>, context[<span class="n">:model</span>].id.to_s, name)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(file, <span class="n">:store</span>, context: { model: <span class="t">YOUR_ORM_MODEL</span> } })</code></pre>
+
+<h3>ORM usage example</h3>
+
+<p>Currently ORM adapters are not implmented.</p>
+
+<h4>Granite.</h4>
+
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">FileImport</span> <span class="o">&lt;</span> <span class="t">Granite</span><span class="t">::</span><span class="t">Base</span>
+  connection pg
+  table file_imports
+
+  column id : <span class="t">Int64</span>, primary: <span class="n">true</span>
+  column asset_data : <span class="t">Shrine</span><span class="t">::</span><span class="t">UploadedFile</span>, converter: <span class="t">Granite</span><span class="t">::</span><span class="t">Converters</span><span class="t">::</span><span class="t">Json</span>(<span class="t">Shrine</span><span class="t">::</span><span class="t">UploadedFile</span>, <span class="t">JSON</span><span class="t">::</span><span class="t">Any</span>)
+
+  after_save <span class="k">do</span>
+    <span class="k">if</span> @asset_changed && @asset_data
+      @asset_data <span class="o">=</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(@asset_data.not_nil!, <span class="n">:store</span>, move: <span class="n">true</span>, context: { model: <span class="k">self</span> })
+      @asset_changed <span class="o">=</span> <span class="n">false</span>
+
+      save!
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="m">asset</span><span class="o">=</span>(upload : <span class="t">Amber</span><span class="t">::</span><span class="t">Router</span><span class="t">::</span><span class="t">File</span>)
+    @asset_data <span class="o">=</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(upload.file, <span class="n">:cache</span>, metadata: { filename: upload.filename })
+    @asset_changed <span class="o">=</span> <span class="n">true</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<h4>Jennifer</h4>
+
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">FileImport</span> <span class="o">&lt;</span> <span class="t">Jennifer</span><span class="t">::</span><span class="t">Model</span><span class="t">::</span><span class="t">Base</span>
+  @asset_changed : <span class="t">Bool</span> <span class="o">|</span> <span class="t">Nil</span>
+
+  with_timestamps
+
+  mapping(
+    id: <span class="t">Primary32</span>,
+    asset_data: <span class="t">JSON</span><span class="t">::</span><span class="t">Any</span>?,
+    created_at: <span class="t">Time</span>?,
+    updated_at: <span class="t">Time</span>?
+  )
+
+  after_save <span class="n">:move_to_store</span>
+
+  <span class="k">def</span> <span class="m">asset</span><span class="o">=</span>(upload : <span class="t">Amber</span><span class="t">::</span><span class="t">Router</span><span class="t">::</span><span class="t">File</span>)
+    <span class="k">self</span>.asset_data <span class="o">=</span> <span class="t">JSON</span>.parse(<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(upload.file, <span class="n">:cache</span>, metadata: { filename: upload.filename }).to_json)
+    asset_changed! <span class="k">if</span> asset_data
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="m">asset</span>
+    <span class="t">Shrine</span><span class="t">::</span><span class="t">UploadedFile</span>.from_json(asset_data.not_nil!.to_json) <span class="k">if</span> asset_data
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="m">asset_changed?</span>
+    @asset_changed || <span class="n">false</span>
+  <span class="k">end</span>
+
+  <span class="k">private</span> <span class="k">def</span> <span class="m">asset_changed!</span>
+    @asset_changed <span class="o">=</span> <span class="n">true</span>
+  <span class="k">end</span>
+
+  <span class="k">private</span> <span class="k">def</span> <span class="m">move_to_store</span>
+    <span class="k">if</span> asset_changed?
+      <span class="k">self</span>.asset_data <span class="o">=</span> <span class="t">JSON</span>.parse(<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(asset.not_nil!, <span class="n">:store</span>, move: <span class="n">true</span>, context: { model: <span class="k">self</span> }).to_json)
+      @asset_changed <span class="o">=</span> <span class="n">false</span>
+      save!
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<h3>Feature Progress</h3>
+
+<p>In no particular order, features that have been implemented and are planned.
+Items not marked as completed may have partial implementations.</p>
+
+<ul><li>[X] Shrine</li><li>[X] Shrine::UploadedFile</li><li>[ ] Shrine::Attacher</li><li>[ ] Shrine::Attachment</li><li>[ ] Shrine::Storage</li><ul><li>[X] Shrine::Storage::Memory</li><li>[X] Shrine::Storage::FileSystem</li><li>[ ] Shrine::Storage::S3</li></ul><li>[ ] Uploaders</li><ul><li>[X] Custom uploaders</li><li>[ ] Derivatives</li></ul><li>[ ] ORM adapters</li><ul><li>[ ] <code>Granite</code> <a href="https://github.com/amberframework/granite" target="_blank">https://github.com/amberframework/granite</a></li><li>[ ] <code>crecto</code> <a href="https://github.com/Crecto/crecto" target="_blank">https://github.com/Crecto/crecto</a></li><li>[ ] <code>jennifer.cr</code> <a href="https://github.com/imdrasil/jennifer.cr" target="_blank">https://github.com/imdrasil/jennifer.cr</a></li></ul><li>[ ] Plugins</li><li>[ ] Background processing</li></ul>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork it (&lt;https://github.com/your-github-user/shrine.cr/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/igor-alexandrov" target="_blank">Igor Alexandrov</a> - creator and maintainer</li></ul>
+</div>
+</body>
+</html>

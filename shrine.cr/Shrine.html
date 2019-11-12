@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.1">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/jetrockets/shrine.cr">
+  <title>Shrine - github.com/jetrockets/shrine.cr</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/jetrockets/shrine.cr/Shrine" data-name="shrine">
+      <a href="Shrine.html">Shrine</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/ClassMethods" data-name="shrine::classmethods">
+      <a href="Shrine/ClassMethods.html">ClassMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Error" data-name="shrine::error">
+      <a href="Shrine/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/FileNotFound" data-name="shrine::filenotfound">
+      <a href="Shrine/FileNotFound.html">FileNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/InstanceMethods" data-name="shrine::instancemethods">
+      <a href="Shrine/InstanceMethods.html">InstanceMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/InvalidFile" data-name="shrine::invalidfile">
+      <a href="Shrine/InvalidFile.html">InvalidFile</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins" data-name="shrine::plugins">
+      <a href="Shrine/Plugins.html">Plugins</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/Base" data-name="shrine::plugins::base">
+      <a href="Shrine/Plugins/Base.html">Base</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Settings" data-name="shrine::settings">
+      <a href="Shrine/Settings.html">Settings</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage" data-name="shrine::storage">
+      <a href="Shrine/Storage.html">Storage</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage/Base" data-name="shrine::storage::base">
+      <a href="Shrine/Storage/Base.html">Base</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage/FileSystem" data-name="shrine::storage::filesystem">
+      <a href="Shrine/Storage/FileSystem.html">FileSystem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Storage/Memory" data-name="shrine::storage::memory">
+      <a href="Shrine/Storage/Memory.html">Memory</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile" data-name="shrine::uploadedfile">
+      <a href="Shrine/UploadedFile.html">UploadedFile</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/Metadata" data-name="shrine::uploadedfile::metadata">
+      <a href="Shrine/UploadedFile/Metadata.html">Metadata</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Shrine
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Shrine.html">Shrine</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type">Habitat::SettingsHelpers</li>
+  
+    <li class="other-type">Habitat::TempConfig</li>
+  
+    <li class="other-type"><a href="Shrine/InstanceMethods.html">Shrine::InstanceMethods</a></li>
+  
+  </ul>
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="Shrine/ClassMethods.html">Shrine::ClassMethods</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine/storage/base.cr#L3" target="_blank">
+        shrine/storage/base.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine/storage/file_system.cr#L3" target="_blank">
+        shrine/storage/file_system.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine/storage/memory.cr#L3" target="_blank">
+        shrine/storage/memory.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine/uploaded_file.cr#L5" target="_blank">
+        shrine/uploaded_file.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine.cr#L8" target="_blank">
+        shrine.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine/plugins.cr#L1" target="_blank">
+        shrine/plugins.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="HABITAT_SETTINGS">
+        <strong>HABITAT_SETTINGS</strong> = <code>[{decl: storages : <span class="t">Hash</span>(<span class="t">String</span>, <span class="t">Storage</span><span class="t">::</span><span class="t">Base</span>) <span class="o">=</span> <span class="t">Hash</span>(<span class="t">String</span>, <span class="t">Storage</span><span class="t">::</span><span class="t">Base</span>).<span class="k">new</span>, example: <span class="n">nil</span>}, {decl: log_level : <span class="t">Logger</span><span class="t">::</span><span class="t">Severity</span> <span class="o">=</span> <span class="t">Logger</span><span class="t">::</span><span class="t">WARN</span>, example: <span class="n">nil</span>}] <span class="k">of</span> <span class="t">Nil</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PLUGINS">
+        <strong>PLUGINS</strong> = <code><span class="o">[]</span> <span class="k">of</span> <span class="t">Nil</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#configure(&block)-class-method" class="signature"><strong>.configure</strong>(&block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logger-class-method" class="signature"><strong>.logger</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logger=(logger)-class-method" class="signature"><strong>.logger=</strong>(logger)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#settings-class-method" class="signature"><strong>.settings</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#settings-instance-method" class="signature"><strong>#settings</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Macro Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#create_plugins_class_method-macro" class="signature"><strong>create_plugins_class_method</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#load_plugin(plugin)-macro" class="signature"><strong>load_plugin</strong>(plugin)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="Shrine/InstanceMethods.html">Shrine::InstanceMethods</a></code></h3>
+  
+  
+    <a href="Shrine/InstanceMethods.html#generate_location(io:IO%7CUploadedFile,metadata,**options)-instance-method" class="tooltip">
+      <span>generate_location(io : IO | UploadedFile, metadata, **options)</span>
+    generate_location</a>, 
+    
+  
+    <a href="Shrine/InstanceMethods.html#generate_uid(io)-instance-method" class="tooltip">
+      <span>generate_uid(io)</span>
+    generate_uid</a>, 
+    
+  
+    <a href="Shrine/InstanceMethods.html#storage-instance-method" class="tooltip">
+      <span>storage</span>
+    storage</a>, 
+    
+  
+    <a href="Shrine/InstanceMethods.html#storage_key:Symbol-instance-method" class="tooltip">
+      <span>storage_key : Symbol</span>
+    storage_key</a>, 
+    
+  
+    <a href="Shrine/InstanceMethods.html#upload(io:IO%7CUploadedFile,**options)-instance-method" class="tooltip">
+      <span>upload(io : IO | UploadedFile, **options)</span>
+    upload</a>, 
+    
+  
+    <a href="Shrine/InstanceMethods.html#warn(message)-instance-method" class="tooltip">
+      <span>warn(message)</span>
+    warn</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from module <code><a href="Shrine/InstanceMethods.html">Shrine::InstanceMethods</a></code></h3>
+  
+  
+    <a href="Shrine/InstanceMethods.html#new(storage_key:Symbol)-class-method" class="tooltip">
+      <span>new(storage_key : Symbol)</span>
+    new</a>
+    
+  
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="configure(&amp;block)-class-method">
+      <div class="signature">
+        
+        def self.<strong>configure</strong>(&block)
+
+        <a class="method-permalink" href="#configure(&block)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logger-class-method">
+      <div class="signature">
+        
+        def self.<strong>logger</strong>
+
+        <a class="method-permalink" href="#logger-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logger=(logger)-class-method">
+      <div class="signature">
+        
+        def self.<strong>logger=</strong>(logger)
+
+        <a class="method-permalink" href="#logger=(logger)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="settings-class-method">
+      <div class="signature">
+        
+        def self.<strong>settings</strong>
+
+        <a class="method-permalink" href="#settings-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="settings-instance-method">
+      <div class="signature">
+        
+        def <strong>settings</strong>
+
+        <a class="method-permalink" href="#settings-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Macro Detail</h2>
+  
+    <div class="entry-detail" id="create_plugins_class_method-macro">
+      <div class="signature">
+        
+        macro <strong>create_plugins_class_method</strong>
+
+        <a class="method-permalink" href="#create_plugins_class_method-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine.cr#L67" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="load_plugin(plugin)-macro">
+      <div class="signature">
+        
+        macro <strong>load_plugin</strong>(plugin)
+
+        <a class="method-permalink" href="#load_plugin(plugin)-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/ab023690682e884814e10a36b60422e794310467/src/shrine.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>
