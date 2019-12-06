@@ -71,13 +71,53 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/Base" data-name="shrine::plugins::base">
-      <a href="Shrine/Plugins/Base.html">Base</a>
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata" data-name="shrine::plugins::addmetadata">
+      <a href="Shrine/Plugins/AddMetadata.html">AddMetadata</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata/InstanceMethods" data-name="shrine::plugins::addmetadata::instancemethods">
+      <a href="Shrine/Plugins/AddMetadata/InstanceMethods.html">InstanceMethods</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType" data-name="shrine::plugins::determinemimetype">
+      <a href="Shrine/Plugins/DetermineMimeType.html">DetermineMimeType</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/ClassMethods" data-name="shrine::plugins::determinemimetype::classmethods">
+      <a href="Shrine/Plugins/DetermineMimeType/ClassMethods.html">ClassMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/InstanceMethods" data-name="shrine::plugins::determinemimetype::instancemethods">
+      <a href="Shrine/Plugins/DetermineMimeType/InstanceMethods.html">InstanceMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer" data-name="shrine::plugins::determinemimetype::mimetypeanalyzer">
+      <a href="Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer.html">MimeTypeAnalyzer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/PluginSettings" data-name="shrine::pluginsettings">
+      <a href="Shrine/PluginSettings.html">PluginSettings</a>
       
     </li>
   
@@ -116,8 +156,8 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/Metadata" data-name="shrine::uploadedfile::metadata">
-      <a href="Shrine/UploadedFile/Metadata.html">Metadata</a>
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/MetadataType" data-name="shrine::uploadedfile::metadatatype">
+      <a href="Shrine/UploadedFile/MetadataType.html">MetadataType</a>
       
     </li>
   
@@ -212,7 +252,7 @@
 
   after_save <span class="k">do</span>
     <span class="k">if</span> @asset_changed && @asset_data
-      @asset_data <span class="o">=</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(@asset_data.not_nil!, <span class="n">:store</span>, move: <span class="n">true</span>, context: { model: <span class="k">self</span> })
+      @asset_data <span class="o">=</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.store(@asset_data.not_nil!, move: <span class="n">true</span>, context: { model: <span class="k">self</span> })
       @asset_changed <span class="o">=</span> <span class="n">false</span>
 
       save!
@@ -220,7 +260,7 @@
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="m">asset</span><span class="o">=</span>(upload : <span class="t">Amber</span><span class="t">::</span><span class="t">Router</span><span class="t">::</span><span class="t">File</span>)
-    @asset_data <span class="o">=</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(upload.file, <span class="n">:cache</span>, metadata: { filename: upload.filename })
+    @asset_data <span class="o">=</span> <span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.cache(upload.file, metadata: { filename: upload.filename })
     @asset_changed <span class="o">=</span> <span class="n">true</span>
   <span class="k">end</span>
 <span class="k">end</span>
@@ -243,7 +283,7 @@
   after_save <span class="n">:move_to_store</span>
 
   <span class="k">def</span> <span class="m">asset</span><span class="o">=</span>(upload : <span class="t">Amber</span><span class="t">::</span><span class="t">Router</span><span class="t">::</span><span class="t">File</span>)
-    <span class="k">self</span>.asset_data <span class="o">=</span> <span class="t">JSON</span>.parse(<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(upload.file, <span class="n">:cache</span>, metadata: { filename: upload.filename }).to_json)
+    <span class="k">self</span>.asset_data <span class="o">=</span> <span class="t">JSON</span>.parse(<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.cache(upload.file, metadata: { filename: upload.filename }).to_json)
     asset_changed! <span class="k">if</span> asset_data
   <span class="k">end</span>
 
@@ -261,7 +301,7 @@
 
   <span class="k">private</span> <span class="k">def</span> <span class="m">move_to_store</span>
     <span class="k">if</span> asset_changed?
-      <span class="k">self</span>.asset_data <span class="o">=</span> <span class="t">JSON</span>.parse(<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.upload(asset.not_nil!, <span class="n">:store</span>, move: <span class="n">true</span>, context: { model: <span class="k">self</span> }).to_json)
+      <span class="k">self</span>.asset_data <span class="o">=</span> <span class="t">JSON</span>.parse(<span class="t">FileImport</span><span class="t">::</span><span class="t">AssetUploader</span>.store(asset.not_nil!, move: <span class="n">true</span>, context: { model: <span class="k">self</span> }).to_json)
       @asset_changed <span class="o">=</span> <span class="n">false</span>
       save!
     <span class="k">end</span>
@@ -269,12 +309,78 @@
 <span class="k">end</span>
 </code></pre>
 
-<h3>Feature Progress</h3>
+<h2>Plugins</h2>
+
+<p>Shrine.cr has a plugins interface similar to Shrine.rb. You can extend functionality of uploaders inherited from <code><a href="Shrine.html">Shrine</a></code> and also extend <code>UploadedFile</code> class.</p>
+
+<h3>Determine MIME Type</h3>
+
+<p>The <code>DetermineMimeType</code> plugin is used to get mime type of uploaded file in several ways.</p>
+
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Uploader</span> <span class="o">&lt;</span> <span class="t">Shrine</span>
+  load_plugin(<span class="t">Shrine</span><span class="t">::</span><span class="t">Plugins</span><span class="t">::</span><span class="t">DetermineMimeType</span>, analyzer: <span class="n">:file</span>)
+
+  finalize_plugins!
+<span class="k">end</span></code></pre>
+
+<p><strong>Analyzers</strong></p>
+
+<p>The following analyzers are accepted:</p>
+
+<p>| Name            | Description                                                                                                                                                                                                         |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>:file</code>         | (<strong>Default</strong>). Uses the file utility to determine the MIME type from file contents. It is installed by default on most operating systems.                                                                           |
+| <code>:mime</code>         | Uses the <a href="https://crystal-lang.org/api/0.31.1/MIME.html" target="_blank">MIME.from_filename</a> method to determine the MIME type from file.                                                                                               |
+| <code>:content_type</code> | Retrieves the value of the <code>#content_type</code> attribute of the IO object. Note that this value normally comes from the "Content-Type" request header, so it's not guaranteed to hold the actual MIME type of the file. |</p>
+
+<h3>Add Metadata</h3>
+
+<p>The <code>AddMetadata</code> plugin provides a convenient method for extracting and adding custom metadata values.</p>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;base64&quot;</span>
+
+<span class="k">class</span> <span class="t">Uploader</span> <span class="o">&lt;</span> <span class="t">Shrine</span>
+  load_plugin(<span class="t">Shrine</span><span class="t">::</span><span class="t">Plugins</span><span class="t">::</span><span class="t">AddMetadata</span>)
+
+  add_metadata <span class="n">:signature</span>, -> {
+    <span class="t">Base64</span>.encode(io.gets_to_end)
+  }
+
+  finalize_plugins!
+<span class="k">end</span></code></pre>
+
+<p>The above will add <code>"signature"</code> to the metadata hash.</p>
+
+<pre><code class="language-crystal">image.metadata[<span class="s">&quot;signature&quot;</span>]</code></pre>
+
+<p><strong>Multiple values</strong></p>
+
+<p>You can also extract multiple metadata values at once.</p>
+
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Uploader</span> <span class="o">&lt;</span> <span class="t">Shrine</span>
+  load_plugin(<span class="t">Shrine</span><span class="t">::</span><span class="t">Plugins</span><span class="t">::</span><span class="t">AddMetadata</span>)
+
+  add_metadata <span class="n">:multiple_values</span>, -> {
+    text <span class="o">=</span> io.gets_to_end
+
+    <span class="t">Shrine</span><span class="t">::</span><span class="t">UploadedFile</span><span class="t">::</span><span class="t">MetadataType</span>{
+      <span class="s">&quot;custom_1&quot;</span> => text,
+      <span class="s">&quot;custom_2&quot;</span> => text <span class="o">*</span> <span class="n">2</span>
+    }
+  }
+
+  finalize_plugins!
+<span class="k">end</span></code></pre>
+
+<pre><code class="language-crystal">image.metadata[<span class="s">&quot;custom_1&quot;</span>]
+image.metadata[<span class="s">&quot;custom_2&quot;</span>]</code></pre>
+
+<h2>Feature Progress</h2>
 
 <p>In no particular order, features that have been implemented and are planned.
 Items not marked as completed may have partial implementations.</p>
 
-<ul><li>[X] Shrine</li><li>[X] Shrine::UploadedFile</li><ul><li>[X] #original_filename</li><li>[X] #extension</li><li>[X] #size</li><li>[X] #mime_type</li><li>[ ] #[]</li><li>[ ] #rewind</li><li>[X] #close</li><li>[X] #url</li><li>[ ] #exists?</li><li>[X] #open</li><li>[X] #download</li><li>[X] #stream</li><li>[ ] #replace</li><li>[ ] #delete</li></ul><li>[ ] Shrine::Attacher</li><li>[ ] Shrine::Attachment</li><li>[ ] Shrine::Storage</li><ul><li>[X] Shrine::Storage::Memory</li><li>[X] Shrine::Storage::FileSystem</li><li>[ ] Shrine::Storage::S3</li></ul><li>[ ] Uploaders</li><ul><li>[X] Custom uploaders</li><li>[ ] Derivatives</li></ul><li>[ ] ORM adapters</li><ul><li>[ ] <code>Granite</code> <a href="https://github.com/amberframework/granite" target="_blank">https://github.com/amberframework/granite</a></li><li>[ ] <code>crecto</code> <a href="https://github.com/Crecto/crecto" target="_blank">https://github.com/Crecto/crecto</a></li><li>[ ] <code>jennifer.cr</code> <a href="https://github.com/imdrasil/jennifer.cr" target="_blank">https://github.com/imdrasil/jennifer.cr</a></li></ul><li>[ ] Plugins</li><li>[ ] Background processing</li></ul>
+<ul><li>[X] Shrine</li><li>[X] Shrine::UploadedFile</li><ul><li>[ ] ==</li><li>[X] #original_filename</li><li>[X] #extension</li><li>[X] #size</li><li>[X] #mime_type</li><li>[X] #close</li><li>[X] #url</li><li>[X] #exists?</li><li>[X] #open</li><li>[X] #download</li><li>[X] #stream</li><li>[X] #replace</li><li>[X] #delete</li></ul><li>[ ] Shrine::Attacher</li><li>[ ] Shrine::Attachment</li><li>[ ] Shrine::Storage</li><ul><li>[X] Shrine::Storage::Memory</li><li>[X] Shrine::Storage::FileSystem</li><li>[ ] Shrine::Storage::S3</li></ul><li>[ ] Uploaders</li><ul><li>[X] Custom uploaders</li><li>[ ] Derivatives</li></ul><li>[ ] ORM adapters</li><ul><li>[ ] <code>Granite</code> <a href="https://github.com/amberframework/granite" target="_blank">https://github.com/amberframework/granite</a></li><li>[ ] <code>crecto</code> <a href="https://github.com/Crecto/crecto" target="_blank">https://github.com/Crecto/crecto</a></li><li>[ ] <code>jennifer.cr</code> <a href="https://github.com/imdrasil/jennifer.cr" target="_blank">https://github.com/imdrasil/jennifer.cr</a></li></ul><li>[X] Plugins</li><li>[ ] Background processing</li></ul>
 
 <h2>Contributing</h2>
 

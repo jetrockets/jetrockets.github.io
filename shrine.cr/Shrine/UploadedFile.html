@@ -71,13 +71,53 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/Base" data-name="shrine::plugins::base">
-      <a href="../Shrine/Plugins/Base.html">Base</a>
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata" data-name="shrine::plugins::addmetadata">
+      <a href="../Shrine/Plugins/AddMetadata.html">AddMetadata</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata/InstanceMethods" data-name="shrine::plugins::addmetadata::instancemethods">
+      <a href="../Shrine/Plugins/AddMetadata/InstanceMethods.html">InstanceMethods</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType" data-name="shrine::plugins::determinemimetype">
+      <a href="../Shrine/Plugins/DetermineMimeType.html">DetermineMimeType</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/ClassMethods" data-name="shrine::plugins::determinemimetype::classmethods">
+      <a href="../Shrine/Plugins/DetermineMimeType/ClassMethods.html">ClassMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/InstanceMethods" data-name="shrine::plugins::determinemimetype::instancemethods">
+      <a href="../Shrine/Plugins/DetermineMimeType/InstanceMethods.html">InstanceMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer" data-name="shrine::plugins::determinemimetype::mimetypeanalyzer">
+      <a href="../Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer.html">MimeTypeAnalyzer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/PluginSettings" data-name="shrine::pluginsettings">
+      <a href="../Shrine/PluginSettings.html">PluginSettings</a>
       
     </li>
   
@@ -116,8 +156,8 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/Metadata" data-name="shrine::uploadedfile::metadata">
-      <a href="../Shrine/UploadedFile/Metadata.html">Metadata</a>
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/MetadataType" data-name="shrine::uploadedfile::metadatatype">
+      <a href="../Shrine/UploadedFile/MetadataType.html">MetadataType</a>
       
     </li>
   
@@ -166,7 +206,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L6" target="_blank">
+      <a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L4" target="_blank">
         shrine/uploaded_file.cr
       </a>
     
@@ -181,17 +221,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(id:String,storage:String,metadata:NamedTuple=NamedTuple.new)-class-method" class="signature"><strong>.new</strong>(id : String, storage : String, metadata : NamedTuple = <span class="t">NamedTuple</span>.<span class="k">new</span>)</a>
+        <a href="#new(id:String,storage:String,metadata:MetadataType=MetadataType.new)-class-method" class="signature"><strong>.new</strong>(id : String, storage : String, metadata : MetadataType = <span class="t">MetadataType</span>.<span class="k">new</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(id:String,storage:Symbol,metadata:NamedTuple=NamedTuple.new)-class-method" class="signature"><strong>.new</strong>(id : String, storage : Symbol, metadata : NamedTuple = <span class="t">NamedTuple</span>.<span class="k">new</span>)</a>
+        <a href="#new(id:String,storage:Symbol,metadata:MetadataType=MetadataType.new)-class-method" class="signature"><strong>.new</strong>(id : String, storage : Symbol, metadata : MetadataType = <span class="t">MetadataType</span>.<span class="k">new</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(__temp_36:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_36 : JSON::PullParser)</a>
+        <a href="#new(__temp_30:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_30 : JSON::PullParser)</a>
         
       </li>
     
@@ -224,6 +264,13 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#delete-instance-method" class="signature"><strong>#delete</strong></a>
+        
+          <div class="summary"><p>Calls <code><a href="../Shrine/UploadedFile.html#delete-instance-method">#delete</a></code> on the storage, which deletes the file from the storage.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#download(**options,&block)-instance-method" class="signature"><strong>#download</strong>(**options, &block)</a>
         
           <div class="summary"><p>Streams content into a newly created tempfile, yields it to the block, and at the end of the block automatically closes it.</p></div>
@@ -250,12 +297,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#gets_to_end(*args,**options,&block)-instance-method" class="signature"><strong>#gets_to_end</strong>(*args, **options, &block)</a>
+        <a href="#gets_to_end(*args,**options)-instance-method" class="signature"><strong>#gets_to_end</strong>(*args, **options)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#gets_to_end(*args,**options)-instance-method" class="signature"><strong>#gets_to_end</strong>(*args, **options)</a>
+        <a href="#gets_to_end(*args,**options,&block)-instance-method" class="signature"><strong>#gets_to_end</strong>(*args, **options, &block)</a>
         
       </li>
     
@@ -275,22 +322,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata:UploadedFile::Metadata-instance-method" class="signature"><strong>#metadata</strong> : UploadedFile::Metadata</a>
+        <a href="#metadata:MetadataType-instance-method" class="signature"><strong>#metadata</strong> : MetadataType</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#metadata=(_metadata:UploadedFile::Metadata)-instance-method" class="signature"><strong>#metadata=</strong>(_metadata : UploadedFile::Metadata)</a>
+        <a href="#metadata=(_metadata:MetadataType)-instance-method" class="signature"><strong>#metadata=</strong>(_metadata : MetadataType)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mime_type(*args,**options,&block)-instance-method" class="signature"><strong>#mime_type</strong>(*args, **options, &block)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#mime_type(*args,**options)-instance-method" class="signature"><strong>#mime_type</strong>(*args, **options)</a>
+        <a href="#mime_type-instance-method" class="signature"><strong>#mime_type</strong></a>
         
       </li>
     
@@ -319,22 +361,24 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#pos(*args,**options,&block)-instance-method" class="signature"><strong>#pos</strong>(*args, **options, &block)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#pos(*args,**options)-instance-method" class="signature"><strong>#pos</strong>(*args, **options)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size(*args,**options,&block)-instance-method" class="signature"><strong>#size</strong>(*args, **options, &block)</a>
+        <a href="#pos(*args,**options,&block)-instance-method" class="signature"><strong>#pos</strong>(*args, **options, &block)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size(*args,**options)-instance-method" class="signature"><strong>#size</strong>(*args, **options)</a>
+        <a href="#replace(io,**options)-instance-method" class="signature"><strong>#replace</strong>(io, **options)</a>
+        
+          <div class="summary"><p>Uploads a new file to this file's location and returns it.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size-instance-method" class="signature"><strong>#size</strong></a>
         
       </li>
     
@@ -364,6 +408,13 @@
     
       <li class="entry-summary">
         <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uploader-instance-method" class="signature"><strong>#uploader</strong></a>
+        
+          <div class="summary"><p>Returns an uploader object for the corresponding storage.</p></div>
         
       </li>
     
@@ -407,44 +458,44 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(id:String,storage:String,metadata:NamedTuple=NamedTuple.new)-class-method">
+    <div class="entry-detail" id="new(id:String,storage:String,metadata:MetadataType=MetadataType.new)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : String, storage : String, metadata : NamedTuple = <span class="t">NamedTuple</span>.<span class="k">new</span>)
+        def self.<strong>new</strong>(id : String, storage : String, metadata : <a href="../Shrine/UploadedFile/MetadataType.html">MetadataType</a> = <span class="t">MetadataType</span>.<span class="k">new</span>)
 
-        <a class="method-permalink" href="#new(id:String,storage:String,metadata:NamedTuple=NamedTuple.new)-class-method">#</a>
+        <a class="method-permalink" href="#new(id:String,storage:String,metadata:MetadataType=MetadataType.new)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(id:String,storage:Symbol,metadata:NamedTuple=NamedTuple.new)-class-method">
+    <div class="entry-detail" id="new(id:String,storage:Symbol,metadata:MetadataType=MetadataType.new)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(id : String, storage : Symbol, metadata : NamedTuple = <span class="t">NamedTuple</span>.<span class="k">new</span>)
+        def self.<strong>new</strong>(id : String, storage : Symbol, metadata : <a href="../Shrine/UploadedFile/MetadataType.html">MetadataType</a> = <span class="t">MetadataType</span>.<span class="k">new</span>)
 
-        <a class="method-permalink" href="#new(id:String,storage:Symbol,metadata:NamedTuple=NamedTuple.new)-class-method">#</a>
+        <a class="method-permalink" href="#new(id:String,storage:Symbol,metadata:MetadataType=MetadataType.new)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(__temp_36:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_30:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_36 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_30 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new(__temp_36:JSON::PullParser)-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_30:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -476,7 +527,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -498,7 +549,7 @@ opened IO object.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -514,7 +565,29 @@ opened IO object.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong>
+
+        <a class="method-permalink" href="#delete-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calls <code><a href="../Shrine/UploadedFile.html#delete-instance-method">#delete</a></code> on the storage, which deletes the file from the
+storage.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -540,7 +613,7 @@ return value.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L139" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L126" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -564,7 +637,7 @@ return value.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L124" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L111" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -586,7 +659,7 @@ on the storage.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L186" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L173" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -602,23 +675,7 @@ on the storage.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L64" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="gets_to_end(*args,**options,&amp;block)-instance-method">
-      <div class="signature">
-        
-        def <strong>gets_to_end</strong>(*args, **options, &block)
-
-        <a class="method-permalink" href="#gets_to_end(*args,**options,&block)-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -634,7 +691,23 @@ on the storage.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gets_to_end(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>gets_to_end</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#gets_to_end(*args,**options,&block)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -678,17 +751,17 @@ on the storage.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L195" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L198" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="metadata:UploadedFile::Metadata-instance-method">
+    <div class="entry-detail" id="metadata:MetadataType-instance-method">
       <div class="signature">
         
-        def <strong>metadata</strong> : <a href="../Shrine/UploadedFile/Metadata.html">UploadedFile::Metadata</a>
+        def <strong>metadata</strong> : <a href="../Shrine/UploadedFile/MetadataType.html">MetadataType</a>
 
-        <a class="method-permalink" href="#metadata:UploadedFile::Metadata-instance-method">#</a>
+        <a class="method-permalink" href="#metadata:MetadataType-instance-method">#</a>
       </div>
       
       <br/>
@@ -697,12 +770,12 @@ on the storage.</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="metadata=(_metadata:UploadedFile::Metadata)-instance-method">
+    <div class="entry-detail" id="metadata=(_metadata:MetadataType)-instance-method">
       <div class="signature">
         
-        def <strong>metadata=</strong>(_metadata : <a href="../Shrine/UploadedFile/Metadata.html">UploadedFile::Metadata</a>)
+        def <strong>metadata=</strong>(_metadata : <a href="../Shrine/UploadedFile/MetadataType.html">MetadataType</a>)
 
-        <a class="method-permalink" href="#metadata=(_metadata:UploadedFile::Metadata)-instance-method">#</a>
+        <a class="method-permalink" href="#metadata=(_metadata:MetadataType)-instance-method">#</a>
       </div>
       
       <br/>
@@ -711,34 +784,18 @@ on the storage.</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="mime_type(*args,**options,&amp;block)-instance-method">
+    <div class="entry-detail" id="mime_type-instance-method">
       <div class="signature">
         
-        def <strong>mime_type</strong>(*args, **options, &block)
+        def <strong>mime_type</strong>
 
-        <a class="method-permalink" href="#mime_type(*args,**options,&block)-instance-method">#</a>
+        <a class="method-permalink" href="#mime_type-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L52" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="mime_type(*args,**options)-instance-method">
-      <div class="signature">
-        
-        def <strong>mime_type</strong>(*args, **options)
-
-        <a class="method-permalink" href="#mime_type(*args,**options)-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -775,7 +832,7 @@ uploaded_file.open { <span class="o">|</span>io<span class="o">|</span> io.read 
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L88" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -791,7 +848,7 @@ uploaded_file.open { <span class="o">|</span>io<span class="o">|</span> io.read 
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L106" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -812,7 +869,7 @@ uploaded_file.open { <span class="o">|</span>io<span class="o">|</span> io.read 
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L162" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -828,23 +885,7 @@ uploaded_file.open { <span class="o">|</span>io<span class="o">|</span> io.read 
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L72" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="pos(*args,**options,&amp;block)-instance-method">
-      <div class="signature">
-        
-        def <strong>pos</strong>(*args, **options, &block)
-
-        <a class="method-permalink" href="#pos(*args,**options,&block)-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -860,39 +901,60 @@ uploaded_file.open { <span class="o">|</span>io<span class="o">|</span> io.read 
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="size(*args,**options,&amp;block)-instance-method">
+    <div class="entry-detail" id="pos(*args,**options,&amp;block)-instance-method">
       <div class="signature">
         
-        def <strong>size</strong>(*args, **options, &block)
+        def <strong>pos</strong>(*args, **options, &block)
 
-        <a class="method-permalink" href="#size(*args,**options,&block)-instance-method">#</a>
+        <a class="method-permalink" href="#pos(*args,**options,&block)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="size(*args,**options)-instance-method">
+    <div class="entry-detail" id="replace(io,**options)-instance-method">
       <div class="signature">
         
-        def <strong>size</strong>(*args, **options)
+        def <strong>replace</strong>(io, **options)
 
-        <a class="method-permalink" href="#size(*args,**options)-instance-method">#</a>
+        <a class="method-permalink" href="#replace(io,**options)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Uploads a new file to this file's location and returns it.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L178" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong>
+
+        <a class="method-permalink" href="#size-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -913,7 +975,7 @@ uploaded_file.open { <span class="o">|</span>io<span class="o">|</span> io.read 
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L191" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L194" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -969,7 +1031,7 @@ then closed after streaming.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -984,6 +1046,27 @@ then closed after streaming.</p>
       
       <br/>
       <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uploader-instance-method">
+      <div class="signature">
+        
+        def <strong>uploader</strong>
+
+        <a class="method-permalink" href="#uploader-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an uploader object for the corresponding storage.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1004,7 +1087,7 @@ then closed after streaming.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/uploaded_file.cr#L180" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/uploaded_file.cr#L167" target="_blank">View source</a>]
         
       </div>
     </div>

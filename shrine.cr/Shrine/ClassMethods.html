@@ -71,13 +71,53 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/Base" data-name="shrine::plugins::base">
-      <a href="../Shrine/Plugins/Base.html">Base</a>
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata" data-name="shrine::plugins::addmetadata">
+      <a href="../Shrine/Plugins/AddMetadata.html">AddMetadata</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata/InstanceMethods" data-name="shrine::plugins::addmetadata::instancemethods">
+      <a href="../Shrine/Plugins/AddMetadata/InstanceMethods.html">InstanceMethods</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType" data-name="shrine::plugins::determinemimetype">
+      <a href="../Shrine/Plugins/DetermineMimeType.html">DetermineMimeType</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/ClassMethods" data-name="shrine::plugins::determinemimetype::classmethods">
+      <a href="../Shrine/Plugins/DetermineMimeType/ClassMethods.html">ClassMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/InstanceMethods" data-name="shrine::plugins::determinemimetype::instancemethods">
+      <a href="../Shrine/Plugins/DetermineMimeType/InstanceMethods.html">InstanceMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer" data-name="shrine::plugins::determinemimetype::mimetypeanalyzer">
+      <a href="../Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer.html">MimeTypeAnalyzer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/PluginSettings" data-name="shrine::pluginsettings">
+      <a href="../Shrine/PluginSettings.html">PluginSettings</a>
       
     </li>
   
@@ -116,8 +156,8 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/Metadata" data-name="shrine::uploadedfile::metadata">
-      <a href="../Shrine/UploadedFile/Metadata.html">Metadata</a>
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/MetadataType" data-name="shrine::uploadedfile::metadatatype">
+      <a href="../Shrine/UploadedFile/MetadataType.html">MetadataType</a>
       
     </li>
   
@@ -164,7 +204,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine.cr#L75" target="_blank">
+      <a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L128" target="_blank">
         shrine.cr
       </a>
     
@@ -183,9 +223,24 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#find_storage(name:String%7CSymbol)-instance-method" class="signature"><strong>#find_storage</strong>(name : String | Symbol)</a>
+        <a href="#cache(io,**options)-instance-method" class="signature"><strong>#cache</strong>(io, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#find_storage(name:String)-instance-method" class="signature"><strong>#find_storage</strong>(name : String)</a>
         
           <div class="summary"><p>Retrieves the storage under the given identifier (Symbol), raising Shrine::Error if the storage is missing.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#raise_if_missing_settings!-instance-method" class="signature"><strong>#raise_if_missing_settings!</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#store(io,**options)-instance-method" class="signature"><strong>#store</strong>(io, **options)</a>
         
       </li>
     
@@ -193,6 +248,13 @@
         <a href="#upload(io,storage,**options)-instance-method" class="signature"><strong>#upload</strong>(io, storage, **options)</a>
         
           <div class="summary"><p>Uploads the file to the specified storage.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#warn(message)-instance-method" class="signature"><strong>#warn</strong>(message)</a>
+        
+          <div class="summary"><p>Prints a warning to the logger.</p></div>
         
       </li>
     
@@ -213,12 +275,28 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="find_storage(name:String|Symbol)-instance-method">
+    <div class="entry-detail" id="cache(io,**options)-instance-method">
       <div class="signature">
         
-        def <strong>find_storage</strong>(name : String | Symbol)
+        def <strong>cache</strong>(io, **options)
 
-        <a class="method-permalink" href="#find_storage(name:String%7CSymbol)-instance-method">#</a>
+        <a class="method-permalink" href="#cache(io,**options)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L147" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="find_storage(name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>find_storage</strong>(name : String)
+
+        <a class="method-permalink" href="#find_storage(name:String)-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -229,7 +307,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="raise_if_missing_settings!-instance-method">
+      <div class="signature">
+        
+        def <strong>raise_if_missing_settings!</strong>
+
+        <a class="method-permalink" href="#raise_if_missing_settings!-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L155" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="store(io,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>store</strong>(io, **options)
+
+        <a class="method-permalink" href="#store(io,**options)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L151" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -246,13 +356,34 @@
           
           <p>Uploads the file to the specified storage. It delegates to <code>Shrine#upload</code>.</p>
 
-<pre><code><span class="t">Shrine</span>.upload(io, <span class="n">:store</span>) <span class="c">#=&gt; #&lt;Shrine::UploadedFile&gt;</span></code></pre>
+<pre><code><span class="t">Shrine</span>.upload(io, <span class="n">:store</span>) <span class="c"># =&gt; #&lt;Shrine::UploadedFile&gt;</span></code></pre>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="warn(message)-instance-method">
+      <div class="signature">
+        
+        def <strong>warn</strong>(message)
+
+        <a class="method-permalink" href="#warn(message)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Prints a warning to the logger.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L160" target="_blank">View source</a>]
         
       </div>
     </div>

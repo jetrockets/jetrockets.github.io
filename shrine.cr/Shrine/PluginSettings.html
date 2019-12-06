@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/jetrockets/shrine.cr">
-  <title>Shrine::Settings - github.com/jetrockets/shrine.cr</title>
+  <title>Shrine::PluginSettings - github.com/jetrockets/shrine.cr</title>
 </head>
 <body>
 
@@ -116,12 +116,12 @@
       
     </li>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/PluginSettings" data-name="shrine::pluginsettings">
+  <li class=" current" data-id="github.com/jetrockets/shrine.cr/Shrine/PluginSettings" data-name="shrine::pluginsettings">
       <a href="../Shrine/PluginSettings.html">PluginSettings</a>
       
     </li>
   
-  <li class=" current" data-id="github.com/jetrockets/shrine.cr/Shrine/Settings" data-name="shrine::settings">
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Settings" data-name="shrine::settings">
       <a href="../Shrine/Settings.html">Settings</a>
       
     </li>
@@ -180,12 +180,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Shrine::Settings
+  <span class="kind">struct</span> Shrine::PluginSettings
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Shrine/Settings.html">Shrine::Settings</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Shrine/PluginSettings.html">Shrine::PluginSettings</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -206,7 +206,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L25" target="_blank">
+      <a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L30" target="_blank">
         shrine.cr
       </a>
     
@@ -217,44 +217,29 @@
 
 
 
-
-
-  <h2>Class Method Summary</h2>
+  <h2>Constructors</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#log_level-class-method" class="signature"><strong>.log_level</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#log_level=(value:Logger::Severity)-class-method" class="signature"><strong>.log_level=</strong>(value : Logger::Severity)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#log_level?-class-method" class="signature"><strong>.log_level?</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#storages-class-method" class="signature"><strong>.storages</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#storages=(value:Hash(String,Storage::Base))-class-method" class="signature"><strong>.storages=</strong>(value : Hash(String, Storage::Base))</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#storages?-class-method" class="signature"><strong>.storages?</strong></a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
       </li>
     
   </ul>
 
 
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#all-instance-method" class="signature"><strong>#all</strong></a>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -282,99 +267,60 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
-
-
-  <h2>Class Method Detail</h2>
+  <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="log_level-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>log_level</strong>
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#log_level-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="log_level=(value:Logger::Severity)-class-method">
-      <div class="signature">
-        
-        def self.<strong>log_level=</strong>(value : Logger::Severity)
-
-        <a class="method-permalink" href="#log_level=(value:Logger::Severity)-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="log_level?-class-method">
-      <div class="signature">
-        
-        def self.<strong>log_level?</strong>
-
-        <a class="method-permalink" href="#log_level?-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="storages-class-method">
-      <div class="signature">
-        
-        def self.<strong>storages</strong>
-
-        <a class="method-permalink" href="#storages-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="storages=(value:Hash(String,Storage::Base))-class-method">
-      <div class="signature">
-        
-        def self.<strong>storages=</strong>(value : Hash(String, <a href="../Shrine/Storage/Base.html">Storage::Base</a>))
-
-        <a class="method-permalink" href="#storages=(value:Hash(String,Storage::Base))-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="storages?-class-method">
-      <div class="signature">
-        
-        def self.<strong>storages?</strong>
-
-        <a class="method-permalink" href="#storages?-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
   
 
 
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="all-instance-method">
+      <div class="signature">
+        
+        def <strong>all</strong>
+
+        <a class="method-permalink" href="#all-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 

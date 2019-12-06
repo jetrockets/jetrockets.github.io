@@ -71,13 +71,53 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/Base" data-name="shrine::plugins::base">
-      <a href="../../Shrine/Plugins/Base.html">Base</a>
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata" data-name="shrine::plugins::addmetadata">
+      <a href="../../Shrine/Plugins/AddMetadata.html">AddMetadata</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/AddMetadata/InstanceMethods" data-name="shrine::plugins::addmetadata::instancemethods">
+      <a href="../../Shrine/Plugins/AddMetadata/InstanceMethods.html">InstanceMethods</a>
       
     </li>
   
 </ul>
 
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType" data-name="shrine::plugins::determinemimetype">
+      <a href="../../Shrine/Plugins/DetermineMimeType.html">DetermineMimeType</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/ClassMethods" data-name="shrine::plugins::determinemimetype::classmethods">
+      <a href="../../Shrine/Plugins/DetermineMimeType/ClassMethods.html">ClassMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/InstanceMethods" data-name="shrine::plugins::determinemimetype::instancemethods">
+      <a href="../../Shrine/Plugins/DetermineMimeType/InstanceMethods.html">InstanceMethods</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer" data-name="shrine::plugins::determinemimetype::mimetypeanalyzer">
+      <a href="../../Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer.html">MimeTypeAnalyzer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/PluginSettings" data-name="shrine::pluginsettings">
+      <a href="../../Shrine/PluginSettings.html">PluginSettings</a>
       
     </li>
   
@@ -116,8 +156,8 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/Metadata" data-name="shrine::uploadedfile::metadata">
-      <a href="../../Shrine/UploadedFile/Metadata.html">Metadata</a>
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/UploadedFile/MetadataType" data-name="shrine::uploadedfile::metadatatype">
+      <a href="../../Shrine/UploadedFile/MetadataType.html">MetadataType</a>
       
     </li>
   
@@ -166,7 +206,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L5" target="_blank">
+      <a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L5" target="_blank">
         shrine/storage/memory.cr
       </a>
     
@@ -181,7 +221,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(store:Hash=%7B%7DofString=%3EString)-class-method" class="signature"><strong>.new</strong>(store : Hash = {} <span class="k">of</span> <span class="t">String</span> => <span class="t">String</span>)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
       </li>
     
@@ -195,17 +235,14 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#clean?:Bool-instance-method" class="signature"><strong>#clean?</strong> : Bool</a>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#clear!-instance-method" class="signature"><strong>#clear!</strong></a>
         
       </li>
     
       <li class="entry-summary">
         <a href="#delete(id)-instance-method" class="signature"><strong>#delete</strong>(id)</a>
+        
+          <div class="summary"><p>deletes the file from the storage</p></div>
         
       </li>
     
@@ -217,10 +254,14 @@
       <li class="entry-summary">
         <a href="#exists?(id)-instance-method" class="signature"><strong>#exists?</strong>(id)</a>
         
+          <div class="summary"><p>returns whether the file exists on storage</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#open(id)-instance-method" class="signature"><strong>#open</strong>(id)</a>
+        
+          <div class="summary"><p>returns the remote file as an IO-like object</p></div>
         
       </li>
     
@@ -242,6 +283,8 @@
       <li class="entry-summary">
         <a href="#url(id,**options)-instance-method" class="signature"><strong>#url</strong>(id, **options)</a>
         
+          <div class="summary"><p>returns URL to the remote file, can accept URL options</p></div>
+        
       </li>
     
   </ul>
@@ -256,6 +299,36 @@
 
   <h3>Instance methods inherited from class <code><a href="../../Shrine/Storage/Base.html">Shrine::Storage::Base</a></code></h3>
   
+  
+    <a href="../../Shrine/Storage/Base.html#clean(path)-instance-method" class="tooltip">
+      <span>clean(path)</span>
+    clean</a>, 
+    
+  
+    <a href="../../Shrine/Storage/Base.html#clean?:Bool-instance-method" class="tooltip">
+      <span>clean? : Bool</span>
+    clean?</a>, 
+    
+  
+    <a href="../../Shrine/Storage/Base.html#delete(id)-instance-method" class="tooltip">
+      <span>delete(id)</span>
+    delete</a>, 
+    
+  
+    <a href="../../Shrine/Storage/Base.html#exists?(id)-instance-method" class="tooltip">
+      <span>exists?(id)</span>
+    exists?</a>, 
+    
+  
+    <a href="../../Shrine/Storage/Base.html#open(id,**options)-instance-method" class="tooltip">
+      <span>open(id, **options)</span>
+    open</a>, 
+    
+  
+    <a href="../../Shrine/Storage/Base.html#upload(io,id:String,move=false,**options)-instance-method" class="tooltip">
+      <span>upload(io, id : String, move = <span class="n">false</span>, **options)</span>
+    upload</a>, 
+    
   
     <a href="../../Shrine/Storage/Base.html#url(id,**options)-instance-method" class="tooltip">
       <span>url(id, **options)</span>
@@ -296,18 +369,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(store:Hash={}ofString=&gt;String)-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(store : Hash = {} <span class="k">of</span> <span class="t">String</span> => <span class="t">String</span>)
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#new(store:Hash=%7B%7DofString=%3EString)-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -318,22 +391,6 @@
 
 
   <h2>Instance Method Detail</h2>
-  
-    <div class="entry-detail" id="clean?:Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>clean?</strong> : Bool
-
-        <a class="method-permalink" href="#clean?:Bool-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L7" target="_blank">View source</a>]
-        
-      </div>
-    </div>
   
     <div class="entry-detail" id="clear!-instance-method">
       <div class="signature">
@@ -346,7 +403,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -359,10 +416,19 @@
         <a class="method-permalink" href="#delete(id)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../../Shrine/Storage/Base.html">Shrine::Storage::Base</a>
+            </div>
+          
+          <p>deletes the file from the storage</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -378,7 +444,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -391,10 +457,19 @@
         <a class="method-permalink" href="#exists?(id)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../../Shrine/Storage/Base.html">Shrine::Storage::Base</a>
+            </div>
+          
+          <p>returns whether the file exists on storage</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -407,10 +482,19 @@
         <a class="method-permalink" href="#open(id)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../../Shrine/Storage/Base.html">Shrine::Storage::Base</a>
+            </div>
+          
+          <p>returns the remote file as an IO-like object</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -426,7 +510,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -442,7 +526,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -458,7 +542,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -471,10 +555,19 @@
         <a class="method-permalink" href="#url(id,**options)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../../Shrine/Storage/Base.html">Shrine::Storage::Base</a>
+            </div>
+          
+          <p>returns URL to the remote file, can accept URL options</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/9ca4cfa23453ad61263cb71660d9ecebe5f4286d/src/shrine/storage/memory.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/88fa80dfdb3de0b8d8f82d15154bb4a80226f215/src/shrine/storage/memory.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
