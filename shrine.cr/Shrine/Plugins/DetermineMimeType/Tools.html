@@ -15,7 +15,7 @@
 </svg>
 
   <meta id="repository-name" content="github.com/jetrockets/shrine.cr">
-  <title>Shrine::Plugins::DetermineMimeType::MimeTypeAnalyzer - github.com/jetrockets/shrine.cr</title>
+  <title>Shrine::Plugins::DetermineMimeType::Tools - github.com/jetrockets/shrine.cr</title>
   <script type="text/javascript">
     CrystalDoc.base_path = "../../../";
   </script>
@@ -105,12 +105,12 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer" data-name="shrine::plugins::determinemimetype::mimetypeanalyzer">
+  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer" data-name="shrine::plugins::determinemimetype::mimetypeanalyzer">
       <a href="../../../Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer.html">MimeTypeAnalyzer</a>
       
     </li>
   
-  <li class=" " data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/Tools" data-name="shrine::plugins::determinemimetype::tools">
+  <li class=" current" data-id="github.com/jetrockets/shrine.cr/Shrine/Plugins/DetermineMimeType/Tools" data-name="shrine::plugins::determinemimetype::tools">
       <a href="../../../Shrine/Plugins/DetermineMimeType/Tools.html">Tools</a>
       
     </li>
@@ -194,12 +194,10 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Shrine::Plugins::DetermineMimeType::MimeTypeAnalyzer
+  <span class="kind">enum</span> Shrine::Plugins::DetermineMimeType::Tools
 
 </h1>
 
-
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../../Shrine/Plugins/DetermineMimeType/MimeTypeAnalyzer.html">Shrine::Plugins::DetermineMimeType::MimeTypeAnalyzer</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -227,7 +225,7 @@
   </h2>
   
     
-      <a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L49" target="_blank">
+      <a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L43" target="_blank">
         shrine/plugins/determine_mime_type.cr
       </a>
     
@@ -236,24 +234,36 @@
 
 
 
-
-
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
+      Enum Members
+    </h2>
+  
+  <dl>
     
-      <li class="entry-summary">
-        <a href="#new(tool:Tools)-class-method" class="signature"><strong>.new</strong>(tool : Tools)</a>
-        
-      </li>
+      <dt class="entry-const" id="File">
+        <strong>File</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
     
-  </ul>
+      <dt class="entry-const" id="Mime">
+        <strong>Mime</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="ContentType">
+        <strong>ContentType</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
 
 
 
@@ -270,17 +280,17 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#call(io,**options)-instance-method" class="signature"><strong>#call</strong>(io, **options)</a>
+        <a href="#content_type?-instance-method" class="signature"><strong>#content_type?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#extract_filename(io)-instance-method" class="signature"><strong>#extract_filename</strong>(io)</a>
+        <a href="#file?-instance-method" class="signature"><strong>#file?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#extract_with_content_type(io,options)-instance-method" class="signature"><strong>#extract_with_content_type</strong>(io, options)</a>
+        <a href="#mime?-instance-method" class="signature"><strong>#mime?</strong></a>
         
       </li>
     
@@ -312,34 +322,28 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
-
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(tool:Tools)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(tool : <a href="../../../Shrine/Plugins/DetermineMimeType/Tools.html">Tools</a>)
-
-        <a class="method-permalink" href="#new(tool:Tools)-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L50" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
@@ -354,50 +358,50 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="call(io,**options)-instance-method">
+    <div class="entry-detail" id="content_type?-instance-method">
       <div class="signature">
         
-        def <strong>call</strong>(io, **options)
+        def <strong>content_type?</strong>
 
-        <a class="method-permalink" href="#call(io,**options)-instance-method">#</a>
+        <a class="method-permalink" href="#content_type?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="extract_filename(io)-instance-method">
+    <div class="entry-detail" id="file?-instance-method">
       <div class="signature">
         
-        def <strong>extract_filename</strong>(io)
+        def <strong>file?</strong>
 
-        <a class="method-permalink" href="#extract_filename(io)-instance-method">#</a>
+        <a class="method-permalink" href="#file?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="extract_with_content_type(io,options)-instance-method">
+    <div class="entry-detail" id="mime?-instance-method">
       <div class="signature">
         
-        def <strong>extract_with_content_type</strong>(io, options)
+        def <strong>mime?</strong>
 
-        <a class="method-permalink" href="#extract_with_content_type(io,options)-instance-method">#</a>
+        <a class="method-permalink" href="#mime?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L91" target="_blank">View source</a>]
+          [<a href="https://github.com/jetrockets/shrine.cr/blob/e1f7e8658729e0cf7ed00ebc794dfd4591c36896/src/shrine/plugins/determine_mime_type.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
